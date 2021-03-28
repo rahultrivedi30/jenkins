@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build_code') {
+            steps {
+                echo 'this code is build here'
+                sh '''
+                ls
+                '''
+            }
+        }
+        stage('test_code') {
+            steps {
+                echo 'code should be ready , i should test now'
+                
+            }
+        }
+        stage('Acceptance_test') {
+            steps {
+                echo 'acceptace test pass'
+            }
+        }
+        
+    }
+}
